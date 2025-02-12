@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Toward Industrial - 官方網站</title>
+  <style>
+    /* 重置樣式 */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* 導覽列 */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eaeaea;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+    }
+    .navbar li {
+      margin-left: 20px;
+    }
+    .navbar a {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* 首頁橫幅 */
+    .hero {
+      background: url('hero.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 20px;
+    }
+
+    /* 區段通用樣式 */
+    section {
+      padding: 60px 0;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    /* 產品區 */
+    .products {
+      background: #f9f9f9;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .product-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .product-card p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .product-card a {
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    /* 最新消息 */
+    .news {
+      background: #fff;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .news-card {
+      background: #f9f9f9;
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .news-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .news-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .news-card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .news-card a {
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    /* 頁尾 */
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 40px 0;
+    }
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 20px;
+    }
+    .footer-column h3 {
+      margin-bottom: 15px;
+    }
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-column li {
+      margin-bottom: 8px;
+    }
+    .footer-column a {
+      color: #fff;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      font-size: 14px;
+    }
+
+    /* RWD 響應式 */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+      }
+      .navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      .navbar li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導覽列 -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <h2>Bright Toward</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">首頁</a></li>
+          <li><a href="#">公司介紹</a></li>
+          <li><a href="#">產品</a></li>
+          <li><a href="#">品質</a></li>
+          <li><a href="#">應用</a></li>
+          <li><a href="#">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 首頁橫幅 -->
+  <div class="hero">
+    <div class="container">
+      <h1>自 1988 以來的品質保證</h1>
+      <p>專注於固態繼電器、簧片繼電器及 MEMS 開關的製造</p>
+    </div>
+  </div>
+
+  <!-- 產品區 -->
+  <section class="products">
+    <div class="container">
+      <h2>產品群組</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="product1.jpg" alt="Opto-MOSFET 繼電器">
+          <h3>Opto-MOSFET 繼電器</h3>
+          <p>高性能固態繼電器，適用於半導體測試及工業應用。</p>
+          <a href="#">了解更多</a>
+        </div>
+        <div class="product-card">
+          <img src="product2.jpg" alt="簧片繼電器">
+          <h3>簧片繼電器</h3>
+          <p>多樣化設計滿足各種應用需求，精密可靠。</p>
+          <a href="#">了解更多</a>
+        </div>
+        <div class="product-card">
+          <img src="product3.jpg" alt="固態繼電器">
+          <h3>固態繼電器</h3>
+          <p>穩定的電力控制，專為高載流需求設計。</p>
+          <a href="#">了解更多</a>
+        </div>
+        <div class="product-card">
+          <img src="product4.jpg" alt="RF MEMS 開關">
+          <h3>RF MEMS 開關</h3>
+          <p>低損耗、高可靠性，適用於高速訊號切換。</p>
+          <a href="#">了解更多</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新消息 -->
+  <section class="news">
+    <div class="container">
+      <h2>最新消息</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <img src="news1.jpg" alt="ISO 認證">
+          <h3>[認證] ISO 14064 認證</h3>
+          <p>我們榮獲 ISO 14064 認證，彰顯嚴格品質控管。</p>
+          <a href="#">詳情</a>
+        </div>
+        <div class="news-card">
+          <img src="news2.jpg" alt="展覽活動">
+          <h3>[展覽] 高壓繼電器展覽會</h3>
+          <p>展示最新高壓繼電器產品及創新解決方案。</p>
+          <a href="#">詳情</a>
+        </div>
+        <div class="news-card">
+          <img src="news3.jpg" alt="新產品發表">
+          <h3>[產品] 新一代 MEMS 開關</h3>
+          <p>突破創新技術，為市場帶來全新應用體驗。</p>
+          <a href="#">詳情</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-column">
+        <h3>Bright Toward Industrial Co., Ltd.</h3>
+        <p>5F., No. 206, Jian 8th Rd., Zhonghe Dist., New Taipei City 235, Taiwan (R.O.C.)</p>
+        <p>電話: (+886) 2-8227-6000</p>
+        <p>Email: <a href="mailto:service@relay.com.tw">service@relay.com.tw</a></p>
+      </div>
+      <div class="footer-column">
+        <h3>快速連結</h3>
+        <ul>
+          <li><a href="#">首頁</a></li>
+          <li><a href="#">公司介紹</a></li>
+          <li><a href="#">產品</a></li>
+          <li><a href="#">品質</a></li>
+          <li><a href="#">應用</a></li>
+          <li><a href="#">聯絡我們</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © 2025 Bright Toward Industrial Co., Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
