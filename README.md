@@ -11,3 +11,7 @@ docker run -d -p 8080:5050 amr-official
 ### reference
 www.relay.com.tw
 www.mosrelay.com.tw
+
+
+flyctl launch
+flyctl deploy

@@ -4,19 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADVANCE MOS RELAY - 官方網站</title>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
   <!-- Add Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
   {% include 'header.html' %}
 
-  <!-- Hero Section -->
-  <div class="hero bg-cover bg-center h-96 flex items-center justify-center text-white text-center" style="background-image: url('hero.jpg');">
-    <div class="max-w-2xl mx-auto">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">自 1988 以來的品質保證</h1>
-      <p class="text-xl md:text-2xl">專注於固態繼電器、簧片繼電器及 MEMS 開關的製造</p>
+  <!-- Hero Section with slideshow (modified) -->
+  <div class="relative w-full h-[600px] overflow-hidden">
+    <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 flex items-center justify-center" data-slide="0">
+      <img src="{{ url_for('static', filename='image/intro_image.png') }}" class="w-full h-full object-cover" alt="Slide 1">
+    </div>
+    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center" data-slide="1">
+      <img src="{{ url_for('static', filename='image/mos_relay.png') }}" class="w-full h-full object-cover" alt="Slide 2">
+    </div>
+    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center" data-slide="2">
+      <img src="{{ url_for('static', filename='image/oem_odm.png') }}" class="w-full h-full object-cover" alt="Slide 3">
+    </div>
+    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center" data-slide="3">
+      <img src="{{ url_for('static', filename='image/custmize_product.png') }}" class="w-full h-full object-cover" alt="Slide 4">
+    </div>
+    <!-- 修改 Hero Section 中文字容器 -->
+    <div class="absolute inset-0 flex items-end justify-center text-white text-center pb-10">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">自 1988 以來的品質保證</h1>
+        <p class="text-xl md:text-2xl">專注於固態繼電器、簧片繼電器及 MEMS 開關的製造</p>
+      </div>
     </div>
   </div>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('[data-slide]');
+    setInterval(() => {
+      slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
+    }, 3000);
+  </script>
 
   <!-- Products Section -->
   <section class="products py-16 bg-gray-50">
@@ -24,7 +49,7 @@
       <h2 class="text-2xl md:text-3xl text-center mb-12">產品群組</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <div class="product-card bg-white shadow-md p-5 text-center">
-          <img src="product1.jpg" alt="Opto-MOSFET 繼電器" class="mb-4">
+          <img src="https://via.placeholder.com/150" alt="Opto-MOSFET 繼電器" class="mb-4">
           <h3 class="text-xl font-semibold mb-2">Opto-MOSFET 繼電器</h3>
           <p class="text-gray-600 mb-4">高性能固態繼電器，適用於半導體測試及工業應用。</p>
           <a href="#" class="text-blue-600 font-bold">了解更多</a>
@@ -77,6 +102,10 @@
       </div>
     </div>
   </section>
+
+  <p>
+    ADVANCE MOS RELAY Co., Ltd. 提供高品質產品與服務。
+  </p>
 
   {% include 'footer.html' %}
 </body>
