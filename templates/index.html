@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ADVANCE MOS RELAY - 官方網站</title>
-  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
-  <!-- Add Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  {% include 'pagehead.html' %}
 </head>
 <body>
   {% include 'header.html' %}
@@ -42,32 +37,31 @@
       slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
     }, 3000);
   </script>
-
   <!-- Products Section -->
   <section class="products py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl text-center mb-12">產品群組</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <div class="product-card bg-white shadow-md p-5 text-center">
-          <img src="https://via.placeholder.com/150" alt="Opto-MOSFET 繼電器" class="mb-4">
+          <img src="{{ url_for('static', filename='image/AA58F.webp') }}" alt="Opto-MOSFET 繼電器" class="mb-4 h-48 object-cover">
           <h3 class="text-xl font-semibold mb-2">Opto-MOSFET 繼電器</h3>
           <p class="text-gray-600 mb-4">高性能固態繼電器，適用於半導體測試及工業應用。</p>
           <a href="#" class="text-blue-600 font-bold">了解更多</a>
         </div>
         <div class="product-card bg-white shadow-md p-5 text-center">
-          <img src="product2.jpg" alt="簧片繼電器" class="mb-4">
+          <img src="{{ url_for('static', filename='image/63475449-1.jpg') }}" alt="簧片繼電器" class="mb-4 h-48 object-cover">
           <h3 class="text-xl font-semibold mb-2">簧片繼電器</h3>
           <p class="text-gray-600 mb-4">多樣化設計滿足各種應用需求，精密可靠。</p>
           <a href="#" class="text-blue-600 font-bold">了解更多</a>
         </div>
         <div class="product-card bg-white shadow-md p-5 text-center">
-          <img src="product3.jpg" alt="固態繼電器" class="mb-4">
+          <img src="{{ url_for('static', filename='image/71leE10AMqL._SL1500_-600x400.jpg') }}" alt="固態繼電器" class="mb-4 h-48 object-cover">
           <h3 class="text-xl font-semibold mb-2">固態繼電器</h3>
           <p class="text-gray-600 mb-4">穩定的電力控制，專為高載流需求設計。</p>
           <a href="#" class="text-blue-600 font-bold">了解更多</a>
         </div>
         <div class="product-card bg-white shadow-md p-5 text-center">
-          <img src="product4.jpg" alt="RF MEMS 開關" class="mb-4">
+          <img src="{{ url_for('static', filename='image/MM5130.webp') }}" alt="RF MEMS 開關" class="mb-4 h-48 object-cover">
           <h3 class="text-xl font-semibold mb-2">RF MEMS 開關</h3>
           <p class="text-gray-600 mb-4">低損耗、高可靠性，適用於高速訊號切換。</p>
           <a href="#" class="text-blue-600 font-bold">了解更多</a>
@@ -82,19 +76,19 @@
       <h2 class="text-2xl md:text-3xl text-center mb-12">最新消息</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div class="news-card bg-gray-50 shadow-sm p-5 text-center">
-          <img src="news1.jpg" alt="ISO 認證" class="mb-4">
+            <img src="{{ url_for('static', filename='image/14064-1.jpg') }}" alt="ISO 認證" class="mb-4 h-48 object-cover">
           <h3 class="text-lg font-semibold mb-2">[認證] ISO 14064 認證</h3>
           <p class="text-gray-600 mb-4">我們榮獲 ISO 14064 認證，彰顯嚴格品質控管。</p>
           <a href="#" class="text-blue-600 font-bold">詳情</a>
         </div>
         <div class="news-card bg-gray-50 shadow-sm p-5 text-center">
-          <img src="news2.jpg" alt="展覽活動" class="mb-4">
+            <img src="{{ url_for('static', filename='image/MNCN-1.webp') }}" alt="展覽活動" class="mb-4 h-48 object-cover">
           <h3 class="text-lg font-semibold mb-2">[展覽] 高壓繼電器展覽會</h3>
           <p class="text-gray-600 mb-4">展示最新高壓繼電器產品及創新解決方案。</p>
           <a href="#" class="text-blue-600 font-bold">詳情</a>
         </div>
         <div class="news-card bg-gray-50 shadow-sm p-5 text-center">
-          <img src="news3.jpg" alt="新產品發表" class="mb-4">
+            <img src="{{ url_for('static', filename='image/p7.jpg') }}" alt="新產品發表" class="mb-4 h-48 object-cover">
           <h3 class="text-lg font-semibold mb-2">[產品] 新一代 MEMS 開關</h3>
           <p class="text-gray-600 mb-4">突破創新技術，為市場帶來全新應用體驗。</p>
           <a href="#" class="text-blue-600 font-bold">詳情</a>
@@ -103,9 +97,6 @@
     </div>
   </section>
 
-  <p>
-    ADVANCE MOS RELAY Co., Ltd. 提供高品質產品與服務。
-  </p>
 
   {% include 'footer.html' %}
 </body>
