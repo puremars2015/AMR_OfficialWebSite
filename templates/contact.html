@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bright Toward Industrial - 官方網站</title>
+  <title>ADVANCE MOS RELAY - 官方網站</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -11,6 +11,49 @@
   <main class="py-16">
     <!-- 聯絡我們主要內容 -->
     <h1 class="text-3xl font-bold text-center mb-8">聯絡我們</h1>
+    <div class="flex flex-col md:flex-row md:space-x-8 max-w-4xl mx-auto">
+      <!-- 左側：輸入區 -->
+      <div class="w-full md:w-1/2">
+        <form action="/submit-contact" method="post" class="space-y-4">
+          <div>
+            <label for="name" class="block text-lg font-semibold">個人名稱</label>
+            <input id="name" name="name" type="text" class="w-full border border-gray-300 p-2" required>
+          </div>
+          <div>
+            <label for="company" class="block text-lg font-semibold">公司名稱</label>
+            <input id="company" name="company" type="text" class="w-full border border-gray-300 p-2" required>
+          </div>
+          <div>
+            <label for="email" class="block text-lg font-semibold">電子郵件</label>
+            <input id="email" name="email" type="email" class="w-full border border-gray-300 p-2" required>
+          </div>
+          <div>
+            <label for="message" class="block text-lg font-semibold">諮詢內容</label>
+            <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 p-2" required></textarea>
+          </div>
+          <div>
+            <label for="captcha" class="block text-lg font-semibold">驗證碼</label>
+            <input id="captcha" name="captcha" type="text" class="w-full border border-gray-300 p-2" required>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 mt-4">送出</button>
+          </div>
+        </form>
+      </div>
+      <!-- 右側：聯絡資訊 -->
+      <div class="w-full md:w-1/2 mt-8 md:mt-0 flex items-center">
+        <div class="bg-gray-50 p-6 rounded shadow">
+          <p class="mb-2"><strong>E-mail：</strong>sales@mosrelays.com</p>
+          <p class="mb-2"><strong>地址：</strong>302 新竹縣竹北市博愛街789號(3樓)</p>
+          <p class="mb-2"><strong>Tel：</strong>03-6579301</p>
+          <p class="mb-2"><strong>LINE@：</strong>stingrayhsieh</p>
+        </div>
+      </div>
+    </div>
+    <!-- 新增滿版 Google Map 區塊 -->
+    <div class="mt-8">
+      <iframe width="100%" height="500" src="https://maps.google.com/maps?q=302+%E6%96%B0%E7%AB%B9%E7%B8%A3%E7%AB%B9%E5%8C%97%E5%B8%82%E5%8D%9A%E6%84%9B%E8%A1%97789%E8%99%9F%283%E6%A8%93%29&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
     <!-- ...existing內容... -->
   </main>
   {% include 'footer.html' %}

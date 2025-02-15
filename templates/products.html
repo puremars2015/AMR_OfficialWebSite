@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bright Toward Industrial - 官方網站</title>
+  <title>ADVANCE MOS RELAY - 官方網站</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -11,7 +11,63 @@
   <main class="py-16">
     <!-- 產品列表主要內容 -->
     <h1 class="text-3xl font-bold text-center mb-8">產品列表</h1>
-    <!-- ...existing內容... -->
+    <div class="flex">
+      <aside class="w-1/4 p-4">
+        <!-- 新增產品左側列表 -->
+        <ul class="list-disc pl-4">
+          <li>SMD7/8</li>
+          <li>
+            SOP4
+            <ul class="list-circle pl-4">
+              <li>GU (General Ues)</li>
+              <li>HV (High Voltage)</li>
+              <li>HA (High Current)</li>
+              <li>HS (High speed)</li>
+            </ul>
+          </li>
+          <li>DIP6</li>
+          <li>SMD6</li>
+          <li>SMD5</li>
+        </ul>
+      </aside>
+      <section class="w-3/4 p-4 flex flex-col">
+        <!-- datatable版面 -->
+        <div class="datatable-panel mb-8">
+          <!-- datatable panel placeholder -->
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Column 1</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Column 2</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Column 3</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              <!-- ...table rows... -->
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap">Data 1</td>
+                <td class="px-6 py-4 whitespace-nowrap">Data 2</td>
+                <td class="px-6 py-4 whitespace-nowrap">Data 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 將 PhotoMos Relay 區塊放到版面下面 -->
+        <div class="photomos-relay-panel">
+          <section class="mt-8">
+            <h2 class="text-2xl font-bold mb-4">PhotoMos Relay</h2>
+            <p class="mb-2">不同於機械繼電器：</p>
+            <ul class="list-decimal list-inside">
+              <li>安裝面積小型化</li>
+              <li>高可靠性（長壽命）</li>
+              <li>小輸入電流／低電壓驅動</li>
+              <li>優異的開關特性（高速、低雜訊）</li>
+              <li>熱開關支援</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </div>
   </main>
   {% include 'footer.html' %}
 </body>
